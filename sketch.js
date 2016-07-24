@@ -1,5 +1,5 @@
 function setup() {
-  createCanvas(480, 300);
+  createCanvas(240, 320);
   red = 0;
   green = 255;
   blue = 0;
@@ -12,37 +12,37 @@ function draw() {
 
   // Body
   fill(255, 0, 0);
-  rect(240, 145, 20, 100);
+  rect(120, 160, 20, 100);
 
   // Head
   fill(red, green, blue);
-  ellipse(240, 115, 60, 60);
+  ellipse(120, 115, 60, 60);
 
   // Eyes
   fill(255);
-  ellipse(224, 115, 16, 32);
-  ellipse(256, 115, 16, 32);
+  ellipse(105, 115, 16, 32);
+  ellipse(135, 115, 16, 32);
 
   // Pupils
   fill(0);
-  var XPlus = mouseX / 60;
-  if (XPlus > 8) {
-    XPlus = 8;
+  var XPlus = mouseX / 20;
+  if (XPlus > 12) {
+    XPlus = 12;
   }
-  var YPlus = mouseY / 30;
+  var YPlus = mouseY / 15;
   if (YPlus > 22) {
     YPlus = 22;
   }
-  var Xas = 220 + XPlus;
+  var Xas = 99 + XPlus;
   var Yas = 104 + YPlus;
   ellipse(Xas, Yas, 7, 7);
-  Xas = 252 + XPlus;
+  Xas = 129 + XPlus;
   Yas = 104 + YPlus;
   ellipse(Xas, Yas, 7, 7);
 
   // Legs
-  line(230, 195, 220, 205);
-  line(250, 195, 260, 205);
+  line(110, 210, 100, 220);
+  line(130, 210, 140, 220);
 }
 
 function mousePressed() {
